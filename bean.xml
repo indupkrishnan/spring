@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="lib" class="com.bean.Library">
+<constructor-arg  value="10" name="id"></constructor-arg>
+<constructor-arg  value="java" name="name"></constructor-arg>
+
+<constructor-arg>
+<list>
+<value>hhhhhh</value>
+<value>kkkk</value>
+<value>oooo</value>
+</list>
+</constructor-arg>
+</bean>
+
+<bean id="company1" class="com.bean.Company">
+<property name="name" value="Cognizant"></property>
+<property name="telNo" value="2578"></property>
+<property name="employees">
+<set>
+	<bean class="com.bean.EmployeeDetails" id="employees">
+	<property name="name" value="keerthy"></property>
+	<property name="age" value="26"></property>
+	<property name="id" value="444"></property>
+	</bean>
+	
+	<bean class="com.bean.EmployeeDetails" id="employees">
+	<property name="name" value="kavya"></property>
+	<property name="age" value="29"></property>
+	<property name="id" value="888"></property>
+	</bean>
+</set>
+</property>
+</bean>
+<!--  
+<bean class="com.bean.EmployeeDetails" id="company">
+<property name="name" value="subin"></property>
+<property name="age" value="25"></property>
+<property name="id" value="124"></property>
+</bean>
+-->
+</beans>
